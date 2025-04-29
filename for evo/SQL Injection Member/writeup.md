@@ -153,12 +153,12 @@ It turned out to be `FortyTwo`. Now we'll make everything lowercase and hash it 
 
 ## How to fix
 
-Use Prepared Statements. Data received from users is not directly included in SQL queries. Instead, data is bound to the query as parameters and processed securely by the database engine, which prevents SQL Injection attacks.
+-   Use Prepared Statements. Data received from users is not directly included in SQL queries. Instead, data is bound to the query as parameters and processed securely by the database engine, which prevents SQL Injection attacks.
 
-Restrict SQL account permissions to limit possible damage in case of an attack.
+-   Restrict SQL account permissions to limit possible damage in case of an attack.
 
-Hide error messages, even though this doesn't directly prevent SQL injection.
+-   Hide error messages, even though this doesn't directly prevent SQL injection.
 
-You can filter user inputs.
+-   You can filter user inputs.
 
-Use WAF (Web Application Firewall).
+-   Use WAF (Web Application Firewall).

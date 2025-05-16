@@ -1,3 +1,8 @@
+```
+http://{IP_ADDRESS}/index.php?page=upload
+```
+
+
 ## 🎯 Vulnerability: Unrestricted File Upload
 
 This vulnerability occurs when a web application allows users to upload files without properly validating their type or content. In this case, the server only checks the file extension or the `Content-Type` header, allowing us to upload a file that looks like an image but actually contains PHP code.

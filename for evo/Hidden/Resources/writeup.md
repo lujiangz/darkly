@@ -20,7 +20,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
-base_url = "http://192.168.193.129/.hidden/"
+base_url = "http://{IP_ADDRESS}/.hidden/"
 visited = set()
 flagged = []
 
@@ -41,8 +41,8 @@ def scan(url):
         if url.endswith("README"):
             matches = [line for line in r.text.splitlines() if "flag" in line.lower()]
             if matches:
-                print(f"\n✅ FLAG BULUNDU: {url}")
-                print("📦 İçerik:\n" + "\n".join(matches) + "\n")
+                print(f"\n✅ FLAG HERE: {url}")
+                print("📦 CONTENT:\n" + "\n".join(matches) + "\n")
                 flagged.append((url, matches))
 
         for a in BeautifulSoup(r.text, 'html.parser').find_all('a'):
@@ -52,16 +52,16 @@ def scan(url):
                 if next_url.startswith(base_url):
                     scan(next_url)
     except Exception as e:
-        print(f"Hata: {url} - {str(e)[:100]}")
+        print(f"Error: {url} - {str(e)[:100]}")
 
 if __name__ == "__main__":
-    print("🔍 Taramaya başlandı...\n")
+    print("🔍 start searching...\n")
     scan(base_url)
 
-    print(f"\n🎯 {len(flagged)} README dosyasında 'flag' bulundu.")
+    print(f"\n🎯 {len(flagged)} find 'flag' in README.")
     with open("flagged_readmes.txt", "w", encoding="utf-8") as f:
         for url, lines in flagged:
-            f.write(f"URL: {url}\nFLAG SATIRLARI:\n{chr(10).join(lines)}\n{'-'*50}\n")
+            f.write(f"URL: {url}\nFLAG LINES:\n{chr(10).join(lines)}\n{'-'*50}\n")
 ```
 
 >This script can be described as a simple scraper that scans all folders, including all subfolders, and stops when it finds a URL containing "flag" within the content of any file named "README".
@@ -69,7 +69,7 @@ if __name__ == "__main__":
 
 ```
 URL: http://192.168.193.129/.hidden/whtccjokayshttvxycsvykxcfm/igeemtxnvexvxezqwntmzjltkt/lmpanswobhwcozdqixbowvbrhw/README
-FLAG SATIRLARI:
+FLAG LINES:
 Hey, here is your flag : d5eec3ec36cf80dce44a896f961c1831a05526ec215693c8f2c39543497d4466
 --------------------------------------------------
 ```

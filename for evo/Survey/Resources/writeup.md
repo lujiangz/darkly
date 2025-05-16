@@ -1,3 +1,7 @@
+```
+http://{IP_ADDRESS}/?page=survey
+```
+
 ## 🎯 Client-Side Select Manipulation Vulnerability
 
 ### 🧩 Vulnerable Code

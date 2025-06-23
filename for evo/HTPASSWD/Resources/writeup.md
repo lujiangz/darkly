@@ -90,7 +90,7 @@ GENERATED WORDS: 4612
 ==> DIRECTORY: http://192.168.193.129/whatever/
 ```
 
-**==> DIRECTORY: http://192.168.193.129/admin/**
+**==> DIRECTORY: http://{IP_ADDRESS}/admin/**
 
 Let's go there and log in with:
 

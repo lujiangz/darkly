@@ -7,10 +7,11 @@
 This project covers various web vulnerabilities including but not limited to:
 - SQL Injection
 - XSS (Cross-Site Scripting)
-- CSRF (Cross-Site Request Forgery)
 - File Upload Vulnerabilities
+- Insecure Cookie Handling
+- Brute Force
+- Path Traversal
 - Insecure Direct Object References
-- Authentication Bypass
 - Sensitive Data Exposure
 
 Each vulnerability has its own flag and is documented with:
